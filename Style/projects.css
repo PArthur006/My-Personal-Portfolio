@@ -1,0 +1,170 @@
+@charset "UTF-8";
+
+:root {
+    --primary-blue: #0077cc;
+    --secondary-blue: #005599;
+    --black: #0a0a0a;
+    --white: #ffffff;
+    --light-gray: #f5f5f5;
+    --medium-gray: #cccccc;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--black);
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    
+}
+
+/* NAVBAR */
+#navbar {
+    display: flex;
+    justify-content: space-between; /* Distribui os itens */
+    align-items: center;
+    background: var(--secondary-blue);
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.nav-left {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-btn {
+    background: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.nav-btn:hover {
+    background: var(--light-gray);
+    color: var(--black);
+    border-radius: 10px;
+
+}
+
+/* Estilo do botão Home */
+.home-btn {
+    background: var(--primary-blue);
+    color: var(--white);
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    margin-right: 30px;
+}
+
+.home-btn:hover {
+    background: var(--light-gray);
+    color: var(--black);
+}
+
+/* SEÇÕES DE PROJETOS */
+.project-section {
+    display: none;  /* Todas ocultas por padrão */
+    padding: 100px 20px 50px;
+}
+
+.project-section.active {
+    display: block;  /* Apenas a ativa é exibida */
+}
+
+.certifications {
+    display: inline;
+    padding: 20px 40px;
+    color: white;
+    text-align: left;
+}
+
+/* GRID DE PROJETOS */
+.project-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card {
+    position: relative;
+    width: 330px;
+    height: 230px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: var(--white);
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.project-card:hover .overlay {
+    opacity: 1;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: var(--white);
+    color: var(--black);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    position: relative;
+}
+
+.modal-content img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: var(--primary-blue);
+}

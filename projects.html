@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="Style/projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="Mídias/Imagens/favicon_io/favicon.ico" type="image/x-icon">
+    
+    <title>Projetos</title>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <div class="nav-left">
+            <button class="nav-btn" onclick="showSection('front-end')">Front-End</button>
+            <button class="nav-btn" onclick="showSection('back-end')">Back-End</button>
+            <button class="nav-btn" onclick="showSection('game-dev')">Game Development</button>
+        </div>
+        <a href="index.html" class="home-btn">Início</a>
+    </nav>
+    
+
+    <main>
+        <!-- Seção Projetos Front-End -->
+        <section id="front-end" class="project-section active">
+            <h2>Projetos Front-End</h2>
+            <div class="certifications">
+                <h3 class="left" >Cursos e certificados:</h3>
+                <ul class="left">
+                    <li>Curso em Vídeo
+                        <ul>
+                            <li>HTML5 e CSS3: Módulo 1;</li>
+                            <li>HTML5 e CSS3: Módulo 2;</li>
+                            <li>HTML5 e CSS3: Módulo 3;</li>
+                            <li>Javascript;</li>
+                            <li>Git e GitHub;</li>
+                            <li>Curso prático de SEO: Módulo 1;</li>
+                        </ul>
+                    </li><br>
+                    <li>Udemy
+                        <ul>
+                            <li>Curso Web Moderno Completo;</li>
+                        </ul>
+                    </li><br>
+                    <li>Fundação Bradesco
+                        <ul>
+                            <li>Fundamentos do Design Gráfico;</li>
+                            <li>HTML - Básico;</li>
+                            <li>Crie um site simples usando HTML, CSS e Javascript;</li>
+                        </ul>
+                    </li><br>
+                    <li>FreeCodeCamp
+                        <ul>
+                            <li>Design responsivo para a Web;</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="project-grid">
+                <div class="project-card" onclick="openModal('My-Linktree', 'Descrição aqui', 'Mídias/Imagens/img_front-end/My_Linktree.jpg')">
+                    <img src="Mídias/Imagens/img_front-end/My_Linktree.jpg" alt="My Linktree">
+                    <div class="overlay">Ver Mais</div>
+                </div>
+
+                <div class="project-card" onclick="openModal('Site Android', 'Descrição aqui', 'Mídias/Imagens/img_front-end/site_android_homepage.PNG')">
+                    <img src="Mídias/Imagens/img_front-end/site_android_homepage.PNG" alt="Site Android">
+                    <div class="overlay">Ver Mais</div>
+                </div>
+
+                <div class="project-card" onclick="openModal('FreeCodeCamp', 'Descrição aqui', 'Mídias/Imagens/img_front-end/form_pesq-homepage.PNG')">
+                    <img src="Mídias/Imagens/img_front-end/form_pesq-homepage.PNG" alt="FreeCodeCamp">
+                    <div class="overlay">Ver Mais</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Projetos Back-End -->
+        <section id="back-end" class="project-section">
+            <h2>Projetos Back-End</h2>
+            <div class="certifications">
+                <h3 class="left" >Cursos e certificados:</h3>
+                <ul>
+                    <li>Curso em Vídeo
+                        <ul>
+                            <li>Algoritmo</li>
+                            <li>Python 3 - Mundo 1;</li>
+                            <li>Python 3 - Mundo 2;</li>
+                            <li>Python 3 - Mundo 3;</li>
+                            <li>Git e GitHub;</li>
+                        </ul><br>
+                    <li>Udemy
+                        <ul>
+                            <li>Python para Iniciantes;</li>
+                            <li>Linguagem C, C++ e Orientação a Objetos;</li>
+                        </ul>
+                    </li><br>
+                    <li>Google
+                        <ul>
+                            <li>Inteligência Artificial e Produtividade;</li>
+                        </ul>
+                    </li><br>
+                    <li>Santander Open Academy
+                        <ul>
+                            <li>Linguagem Python</li>
+                        </ul>
+                    </li><br>
+                    <li>Fundação Bradesco
+                        <ul>
+                            <li>Fundamentos de TI: Hardware e Software;</li>
+                            <li>Sistemas Operacionais - Conceitos Básicos;</li>
+                            <li>Linguagem de Programação Python - Básico;</li>
+                        </ul>
+                    </li>
+                    </li>
+                </ul>
+            </div>
+            <div class="project-grid">
+                <div class="project-card" onclick="openModal('Sistema de Gerenciamento de Livros', 'Descrição aqui', 'Mídias/Imagens/img_back-end/Gerenciador_de_Biblioteca.jpg')">
+                    <img src="Mídias/Imagens/img_back-end/Gerenciador_de_Biblioteca.jpg" alt="Sistema de Gerenciamento de Livros">
+                    <div class="overlay">Ver Mais</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Game Development -->
+        <section id="game-dev" class="project-section">
+            <h2>Game Development</h2>
+            <div class="certifications">
+                <h3 class="left" >Cursos e certificados:</h3>
+                <ul>
+                    <li>Udemy
+                        <ul>
+                            <li>Criação de Jogos 2D e 3D na Godot;</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="project-grid">
+                <div class="project-card" onclick="openModal('Sunflower-Knight', 'Descrição aqui', 'Mídias/Imagens/img_game-dev/Sunflower_Knight.jpg')">
+                    <img src="Mídias/Imagens/img_game-dev/Sunflower_Knight.jpg" alt="Sunflower-Knight">
+                    <div class="overlay">Ver Mais</div>
+                </div>
+
+                <!-- <div class="project-card" onclick="openModal('Adventure-Dash', 'Descrição aqui', 'img/projeto3.jpg')">
+                    <img src="img/projeto3.jpg" alt="Adventure-Dash">
+                    <div class="overlay">Ver Mais</div>
+                </div> -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modal-img" src="" alt="Imagem do Projeto">
+            <h3 id="modal-title"></h3>
+            <p id="modal-desc"></p>
+        </div>
+    </div>
+    <script src="JavaScript/projects.js"></script>
+</body>
+</html>
