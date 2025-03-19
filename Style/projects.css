@@ -3,6 +3,8 @@
 :root {
     --primary-blue: #0077cc;
     --secondary-blue: #005599;
+    --tertiary-blue: #5bb3f7;
+    --quaternary-blue: #000855;
     --black: #0a0a0a;
     --white: #ffffff;
     --light-gray: #f5f5f5;
@@ -22,50 +24,57 @@ body {
 /* NAVBAR */
 #navbar {
     display: flex;
-    justify-content: space-between; /* Distribui os itens */
+    justify-content: center;
     align-items: center;
-    background: var(--secondary-blue);
+    background: var(--quaternary-blue); /* Fundo escuro */
     padding: 15px 20px;
     position: fixed;
     top: 0;
     width: 100%;
+    transition: top 0.3s ease-in-out, background 0.3s ease-in-out;
+    z-index: 1000;
 }
 
+/* Botões da Navbar */
+.nav-btn {
+    background: var(--secondary-blue); /* Azul mais escuro para contraste */
+    color: var(--tertiary-blue); /* Azul mais claro no texto */
+    border: 2px solid var(--tertiary-blue); /* Borda para destacar */
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+}
+
+.nav-btn.active {
+    background: var(--primary-blue); /* Azul médio para realce */
+    color: var(--white);
+    border-color: var(--white);
+    font-weight: bold;
+    transform: scale(1.1); /* Efeito de leve aumento */
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* Botões */
 .nav-left {
     display: flex;
     gap: 20px;
 }
 
-.nav-btn {
-    background: var(--primary-blue);
-    color: var(--white);
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 1.2em;
-}
-
 .nav-btn:hover {
-    background: var(--light-gray);
-    color: var(--black);
-    border-radius: 10px;
-
-}
-
-/* Estilo do botão Home */
-.home-btn {
-    background: var(--primary-blue);
+    background: var(--primary-blue); /* Azul médio ao passar o mouse */
     color: var(--white);
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    border-radius: 5px;
-    margin-right: 30px;
+    border-color: var(--white);
 }
 
-.home-btn:hover {
-    background: var(--light-gray);
-    color: var(--black);
+/* Estilo para dispositivos menores */
+@media (max-width: 768px) {
+    .nav-btn {
+        padding: 8px 15px;
+        font-size: 1em;
+    }
 }
 
 /* SEÇÕES DE PROJETOS */
@@ -78,12 +87,67 @@ body {
     display: block;  /* Apenas a ativa é exibida */
 }
 
+h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    background: linear-gradient(to right, var(--primary-blue), var(--tertiary-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--secondary-blue);
+    position: relative;
+    display: inline-block;
+}
+
+
+
 .certifications {
     display: inline;
     padding: 20px 40px;
     color: white;
     text-align: left;
+    font-size: 1.3em;
 }
+
+.cert-list {
+    list-style: none;
+    padding: 0;
+}
+
+.cert-title {
+    font-weight: bold;
+    color: var(--primary-blue);
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cert-title i {
+    color: var(--secondary-blue); /* Ícones destacados */
+}
+
+.cert-items {
+    list-style: none; /* Remove marcadores padrões */
+    padding-left: 20px;
+}
+
+.cert-items li {
+    position: relative;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cert-items li::before {
+    content: "\f058"; /* Ícone do Font Awesome (círculo com check) */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--medium-gray);
+}
+
 
 /* GRID DE PROJETOS */
 .project-grid {
@@ -150,21 +214,24 @@ body {
     text-align: center;
     max-width: 400px;
     position: relative;
+    font-size: 1.1em;
 }
 
 .modal-content img {
     width: 100%;
     border-radius: 10px;
+    max-height: 400px;
+
 }
 
 .close {
     position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 1.5em;
+    top: 0px;
+    right: 5px;
+    font-size: 1.8em;
     cursor: pointer;
 }
 
 .close:hover {
-    color: var(--primary-blue);
+    color: var(--secondary-blue);
 }

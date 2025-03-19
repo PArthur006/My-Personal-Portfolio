@@ -13,149 +13,152 @@
 </head>
 <body>
 
-    <!-- NAVBAR -->
     <nav id="navbar">
         <div class="nav-left">
             <button class="nav-btn" onclick="showSection('front-end')">Front-End</button>
             <button class="nav-btn" onclick="showSection('back-end')">Back-End</button>
             <button class="nav-btn" onclick="showSection('game-dev')">Game Development</button>
         </div>
-        <a href="index.html" class="home-btn">Início</a>
     </nav>
+    
     
 
     <main>
         <!-- Seção Projetos Front-End -->
-        <section id="front-end" class="project-section active">
-            <h2>Projetos Front-End</h2>
-            <div class="certifications">
-                <h3 class="left" >Cursos e certificados:</h3>
-                <ul class="left">
-                    <li>Curso em Vídeo
-                        <ul>
-                            <li>HTML5 e CSS3: Módulo 1;</li>
-                            <li>HTML5 e CSS3: Módulo 2;</li>
-                            <li>HTML5 e CSS3: Módulo 3;</li>
-                            <li>Javascript;</li>
-                            <li>Git e GitHub;</li>
-                            <li>Curso prático de SEO: Módulo 1;</li>
-                        </ul>
-                    </li><br>
-                    <li>Udemy
-                        <ul>
-                            <li>Curso Web Moderno Completo;</li>
-                        </ul>
-                    </li><br>
-                    <li>Fundação Bradesco
-                        <ul>
-                            <li>Fundamentos do Design Gráfico;</li>
-                            <li>HTML - Básico;</li>
-                            <li>Crie um site simples usando HTML, CSS e Javascript;</li>
-                        </ul>
-                    </li><br>
-                    <li>FreeCodeCamp
-                        <ul>
-                            <li>Design responsivo para a Web;</li>
-                        </ul>
-                    </li>
+<section id="front-end" class="project-section active">
+    <h2>Projetos Front-End</h2>
+    <div class="certifications">
+        <h3 class="left">Cursos e certificados:</h3>
+        <ul class="cert-list">
+            <li>
+                <h3 class="cert-title"><i class="fas fa-graduation-cap"></i> Curso em Vídeo</h3>
+                <ul class="cert-items">
+                    <li>HTML5 e CSS3: Módulo 1;</li>
+                    <li>HTML5 e CSS3: Módulo 2;</li>
+                    <li>HTML5 e CSS3: Módulo 3;</li>
+                    <li>Javascript;</li>
+                    <li>Git e GitHub;</li>
+                    <li>Curso prático de SEO: Módulo 1;</li>
                 </ul>
-            </div>
-            <div class="project-grid">
-                <!-- MY LINKTREE -->
-                <div class="project-card" onclick="openModal('My-Linktree', 'Uma página personalizada que centraliza links importantes em um único lugar, proporcionando fácil acesso a redes sociais, projetos e contatos.', 'Mídias/Imagens/img_front-end/My_Linktree.jpg')">
-                    <img src="Mídias/Imagens/img_front-end/My_Linktree.jpg" alt="My Linktree">
-                    <div class="overlay">Ver Mais</div>
-                </div>
-
-                <!-- SITE ANDROID -->
-                <div class="project-card" onclick="openModal('Site Android', ' Uma página informativa sobre o sistema operacional Android, destacando sua evolução, recursos e curiosidades, com um design moderno e responsivo.', 'Mídias/Imagens/img_front-end/site_android_homepage.PNG')">
-                    <img src="Mídias/Imagens/img_front-end/site_android_homepage.PNG" alt="Site Android">
-                    <div class="overlay">Ver Mais</div>
-                </div>
-
-                <!-- FORMULÁRIO DE PESQUISA -->
-                <div class="project-card" onclick="openModal('FreeCodeCamp', 'Um formulário interativo desenvolvido para coletar feedback dos usuários, seguindo boas práticas de acessibilidade e usabilidade.', 'Mídias/Imagens/img_front-end/form_pesq-homepage.PNG')">
-                    <img src="Mídias/Imagens/img_front-end/form_pesq-homepage.PNG" alt="FreeCodeCamp">
-                    <div class="overlay">Ver Mais</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção Projetos Back-End -->
-        <section id="back-end" class="project-section">
-            <h2>Projetos Back-End</h2>
-            <div class="certifications">
-                <h3 class="left" >Cursos e certificados:</h3>
-                <ul>
-                    <li>Curso em Vídeo
-                        <ul>
-                            <li>Algoritmo</li>
-                            <li>Python 3 - Mundo 1;</li>
-                            <li>Python 3 - Mundo 2;</li>
-                            <li>Python 3 - Mundo 3;</li>
-                            <li>Git e GitHub;</li>
-                        </ul><br>
-                    <li>Udemy
-                        <ul>
-                            <li>Python para Iniciantes;</li>
-                            <li>Linguagem C, C++ e Orientação a Objetos;</li>
-                        </ul>
-                    </li><br>
-                    <li>Google
-                        <ul>
-                            <li>Inteligência Artificial e Produtividade;</li>
-                        </ul>
-                    </li><br>
-                    <li>Santander Open Academy
-                        <ul>
-                            <li>Linguagem Python</li>
-                        </ul>
-                    </li><br>
-                    <li>Fundação Bradesco
-                        <ul>
-                            <li>Fundamentos de TI: Hardware e Software;</li>
-                            <li>Sistemas Operacionais - Conceitos Básicos;</li>
-                            <li>Linguagem de Programação Python - Básico;</li>
-                        </ul>
-                    </li>
-                    </li>
+            </li>
+            <li>
+                <h3 class="cert-title"><i class="fas fa-laptop-code"></i> Udemy</h3>
+                <ul class="cert-items">
+                    <li>Curso Web Moderno Completo;</li>
                 </ul>
-            </div>
-            <div class="project-grid">
-                <!-- GERENCIADOR DE LIVROS -->
-                <div class="project-card" onclick="openModal('Sistema de Gerenciamento de Livros', 'Uma aplicação que permite cadastrar, visualizar, editar e excluir livros, facilitando a organização de coleções literárias de forma eficiente.', 'Mídias/Imagens/img_back-end/Gerenciador_de_Biblioteca.jpg')">
-                    <img src="Mídias/Imagens/img_back-end/Gerenciador_de_Biblioteca.jpg" alt="Sistema de Gerenciamento de Livros">
-                    <div class="overlay">Ver Mais</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção Game Development -->
-        <section id="game-dev" class="project-section">
-            <h2>Game Development</h2>
-            <div class="certifications">
-                <h3 class="left" >Cursos e certificados:</h3>
-                <ul>
-                    <li>Udemy
-                        <ul>
-                            <li>Criação de Jogos 2D e 3D na Godot;</li>
-                        </ul>
-                    </li>
+            </li>
+            <li>
+                <h3 class="cert-title"><i class="fas fa-pencil-ruler"></i> Fundação Bradesco</h3>
+                <ul class="cert-items">
+                    <li>Fundamentos do Design Gráfico;</li>
+                    <li>HTML - Básico;</li>
+                    <li>Crie um site simples usando HTML, CSS e Javascript;</li>
                 </ul>
-            </div>
-            <div class="project-grid">
-                <!-- SUNFLOWER-KNIGHT -->
-                <div class="project-card" onclick="openModal('Sunflower-Knight', 'Um jogo 2D que mistura estratégia e ação, onde o jogador assume o papel de um cavaleiro em uma jornada desafiadora, enfrentando inimigos e explorando um mundo pixel art.', 'Mídias/Imagens/img_game-dev/Sunflower_Knight.jpg')">
-                    <img src="Mídias/Imagens/img_game-dev/Sunflower_Knight.jpg" alt="Sunflower-Knight">
-                    <div class="overlay">Ver Mais</div>
-                </div>
+            </li>
+            <li>
+                <h3 class="cert-title"><i class="fas fa-code"></i> FreeCodeCamp</h3>
+                <ul class="cert-items">
+                    <li>Design responsivo para a Web;</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="project-grid">
+        <!-- MY LINKTREE -->
+        <div class="project-card" onclick="openModal('My-Linktree', 'Uma página personalizada que centraliza links importantes em um único lugar, proporcionando fácil acesso a redes sociais, projetos e contatos.', 'Mídias/Imagens/img_front-end/My_Linktree.jpg')">
+            <img src="Mídias/Imagens/img_front-end/My_Linktree.jpg" alt="My Linktree">
+            <div class="overlay">Ver Mais</div>
+        </div>
+        <!-- SITE ANDROID -->
+        <div class="project-card" onclick="openModal('Site Android', 'Uma página informativa sobre o sistema operacional Android, destacando sua evolução, recursos e curiosidades, com um design moderno e responsivo.', 'Mídias/Imagens/img_front-end/site_android_homepage.PNG')">
+            <img src="Mídias/Imagens/img_front-end/site_android_homepage.PNG" alt="Site Android">
+            <div class="overlay">Ver Mais</div>
+        </div>
+        <!-- FORMULÁRIO DE PESQUISA -->
+        <div class="project-card" onclick="openModal('FreeCodeCamp', 'Um formulário interativo desenvolvido para coletar feedback dos usuários, seguindo boas práticas de acessibilidade e usabilidade.', 'Mídias/Imagens/img_front-end/form_pesq-homepage.PNG')">
+            <img src="Mídias/Imagens/img_front-end/form_pesq-homepage.PNG" alt="FreeCodeCamp">
+            <div class="overlay">Ver Mais</div>
+        </div>
+    </div>
+</section>
 
-                <!-- <div class="project-card" onclick="openModal('Adventure-Dash', 'Descrição aqui', 'img/projeto3.jpg')">
-                    <img src="img/projeto3.jpg" alt="Adventure-Dash">
-                    <div class="overlay">Ver Mais</div>
-                </div> -->
-            </div>
-        </section>
+<!-- Seção Projetos Back-End -->
+<section id="back-end" class="project-section">
+    <h2>Projetos Back-End</h2>
+    <div class="certifications">
+        <h3 class="left">Cursos e certificados:</h3>
+        <ul class="cert-list">
+            <li>
+                <h3 class="cert-title"><i class="fas fa-graduation-cap"></i> Curso em Vídeo</h3>
+                <ul class="cert-items">
+                    <li>Algoritmo</li>
+                    <li>Python 3 - Mundo 1;</li>
+                    <li>Python 3 - Mundo 2;</li>
+                    <li>Python 3 - Mundo 3;</li>
+                    <li>Git e GitHub;</li>
+                </ul>
+            </li>
+            <li>
+                <h3 class="cert-title"><i class="fas fa-laptop-code"></i> Udemy</h3>
+                <ul class="cert-items">
+                    <li>Python para Iniciantes;</li>
+                    <li>Linguagem C, C++ e Orientação a Objetos;</li>
+                </ul>
+            </li>
+            <li>
+                <h3 class="cert-title"><i class="fa-brands fa-google"></i> Google</h3>
+                <ul class="cert-items">
+                    <li>Inteligência Artificial e Produtividade;</li>
+                </ul>
+            </li>
+            <li>
+                <h3 class="cert-title"><i class="fas fa-book"></i> Santander Open Academy</h3>
+                <ul class="cert-items">
+                    <li>Linguagem Python</li>
+                </ul>
+            </li>
+            <li>
+                <h3 class="cert-title"><i class="fas fa-microchip"></i> Fundação Bradesco</h3>
+                <ul class="cert-items">
+                    <li>Fundamentos de TI: Hardware e Software;</li>
+                    <li>Sistemas Operacionais - Conceitos Básicos;</li>
+                    <li>Linguagem de Programação Python - Básico;</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="project-grid">
+        <!-- GERENCIADOR DE LIVROS -->
+        <div class="project-card" onclick="openModal('Sistema de Gerenciamento de Livros', 'Uma aplicação que permite cadastrar, visualizar, editar e excluir livros, facilitando a organização de coleções literárias de forma eficiente.', 'Mídias/Imagens/img_back-end/Gerenciador_de_Biblioteca.jpg')">
+            <img src="Mídias/Imagens/img_back-end/Gerenciador_de_Biblioteca.jpg" alt="Sistema de Gerenciamento de Livros">
+            <div class="overlay">Ver Mais</div>
+        </div>
+    </div>
+</section>
+
+<!-- Seção Game Development -->
+<section id="game-dev" class="project-section">
+    <h2>Game Development</h2>
+    <div class="certifications">
+        <h3 class="left">Cursos e certificados:</h3>
+        <ul class="cert-list">
+            <li>
+                <h3 class="cert-title"><i class="fas fa-gamepad"></i> Udemy</h3>
+                <ul class="cert-items">
+                    <li>Criação de Jogos 2D e 3D na Godot;</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="project-grid">
+        <!-- SUNFLOWER-KNIGHT -->
+        <div class="project-card" onclick="openModal('Sunflower-Knight', 'Um jogo 2D que mistura estratégia e ação, onde o jogador assume o papel de um cavaleiro em uma jornada desafiadora, enfrentando inimigos e explorando um mundo pixel art.', 'Mídias/Imagens/img_game-dev/Sunflower_Knight.jpg')">
+            <img src="Mídias/Imagens/img_game-dev/Sunflower_Knight.jpg" alt="Sunflower-Knight">
+            <div class="overlay">Ver Mais</div>
+        </div>
+    </div>
+</section>
+
     </main>
 
     <!-- Modal -->
