@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const navButtons = document.querySelectorAll(".nav-btn");
 
     function highlightCurrentSection() {
-        let scrollPosition = window.scrollY + window.innerHeight * 0.3; // Ajusta a detecção para mais cedo
+        let scrollPosition = window.scrollY + window.innerHeight * 0.3;
     
         sections.forEach((section) => {
             const top = section.offsetTop;
@@ -43,12 +43,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Alterna entre seções de projetos
 function showSection(sectionId) {
-    // Esconde todas as seções e exibe apenas a selecionada
     document.querySelectorAll("section").forEach((section) => {
         section.style.display = section.id === sectionId ? "block" : "none";
     });
 
-    // Remove a classe 'active' de todos os botões
     document.querySelectorAll(".nav-btn").forEach((btn) => {
         btn.classList.remove("active");
     });

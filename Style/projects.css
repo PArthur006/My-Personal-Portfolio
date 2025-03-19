@@ -21,6 +21,15 @@ body {
     
 }
 
+.projects-text{
+    color: var(--tertiary-blue);
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
 /* NAVBAR */
 #navbar {
     display: flex;
@@ -48,11 +57,11 @@ body {
 }
 
 .nav-btn.active {
-    background: var(--primary-blue); /* Azul médio para realce */
+    background: var(--primary-blue); 
     color: var(--white);
     border-color: var(--white);
     font-weight: bold;
-    transform: scale(1.1); /* Efeito de leve aumento */
+    transform: scale(1.1); 
     transition: all 0.3s ease-in-out;
 }
 
