@@ -1,0 +1,48 @@
+/* Estilos da Seção Sobre Mim com Carrossel */
+#about {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#about h2 {
+  color: #61dafb;
+  border-bottom: 2px solid #61dafb;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 40px;
+}
+
+.carousel-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #1e1e3f;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.slide-content {
+  color: #e0e0e0;
+  padding: 0px;
+}
+
+.slide-content h3 {
+  color: #61dafb;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.slide-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Estilizando os pontos de navegação do Slick */
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #61dafb;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ffffff;
+}

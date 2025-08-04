@@ -1,0 +1,100 @@
+
+/* Estilos globais */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #121212; /* Fundo escuro */
+  color: #e0e0e0; /* Texto claro */
+}
+
+.App {
+  text-align: center;
+}
+
+
+
+/* Estilos das Seções */
+main {
+  padding-top: 80px; /* Espaço para o cabeçalho fixo */
+}
+
+section {
+  padding: 60px 20px;
+  border-bottom: 1px solid #333; /* Linha sutil para separar seções */
+}
+
+section h1, section h2 {
+  color: #61dafb; /* Azul claro para títulos */
+}
+
+#welcome-section {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome-section h1 {
+  font-size: 3rem;
+}
+
+/* Rodapé */
+footer {
+  padding: 20px;
+  background-color: #1e1e3f;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #61dafb;
+  text-decoration: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  main {
+    padding-top: 60px; /* Ajusta o padding para o cabeçalho em telas menores */
+  }
+
+  section {
+    padding: 40px 15px;
+  }
+
+  #welcome-section h1 {
+    font-size: 2rem;
+  }
+
+  /* Ajustes para o carrossel na seção Sobre Mim */
+  .carousel-container {
+    padding: 20px;
+  }
+
+  .slide-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .slide-content p {
+    font-size: 1rem;
+  }
+
+  /* Ajustes para a grade de projetos */
+  .project-grid {
+    grid-template-columns: 1fr; /* Uma coluna em telas menores */
+  }
+
+  /* Ajustes para a grade de cursos */
+  .cert-list {
+    grid-template-columns: 1fr; /* Uma coluna em telas menores */
+  }
+
+  /* Ajustes para os links de contato */
+  .contact-links a {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+}

@@ -1,0 +1,27 @@
+/* Estilos para a PortfolioPage */
+.portfolio-page {
+  padding-top: 80px; /* Espaço para o cabeçalho fixo */
+}
+
+.category-tabs {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.category-tabs button {
+  background-color: transparent;
+  border: 2px solid #61dafb;
+  color: #61dafb;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.category-tabs button:hover,
+.category-tabs button.active {
+  background-color: #61dafb;
+  color: #121212;
+}

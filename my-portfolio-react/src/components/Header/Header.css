@@ -1,0 +1,22 @@
+/* Estilos do Cabeçalho de Navegação */
+#navbar {
+  background-color: #1e1e3f; /* Tom de roxo/azul escuro */
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+#navbar a {
+  color: #61dafb; /* Azul claro */
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+#navbar a:hover {
+  color: #ffffff; /* Branco ao passar o mouse */
+}

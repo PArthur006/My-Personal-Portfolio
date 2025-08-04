@@ -1,0 +1,81 @@
+/* Estilos da Seção de Cursos e Certificados */
+#courses {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#courses h2 {
+  color: #61dafb;
+  border-bottom: 2px solid #61dafb;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 40px;
+}
+
+.courses-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.course-category {
+  margin-bottom: 40px;
+}
+
+.course-category h3 {
+  color: #e0e0e0;
+  font-size: 1.8rem;
+  text-align: left;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.cert-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  justify-items: center; /* Adicionado para centralizar os cards */
+}
+
+.cert-card {
+  background-color: #1e1e3f;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: left;
+  max-width: 400px; /* Adicionado tamanho máximo */
+  margin: 0 auto; /* Centraliza o card quando há espaço */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Foco em transform e box-shadow para hover */
+  backface-visibility: hidden;
+  transform: translateY(0); /* Define um estado inicial explícito para o transform */
+  will-change: transform, box-shadow;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px); /* Animação de hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Sombra mais pronunciada no hover */
+}
+
+.cert-card:hover {
+  transform: translateY(-5px); /* Animação de hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Sombra mais pronunciada no hover */
+}
+
+.cert-card h4 {
+  color: #61dafb;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cert-card ul {
+  list-style: disc; /* Adiciona marcadores de lista */
+  padding-left: 20px; /* Adiciona recuo à esquerda */
+  margin-top: 10px;
+}
+
+.cert-card li {
+  margin-bottom: 8px; /* Aumenta o espaçamento entre os itens */
+}
