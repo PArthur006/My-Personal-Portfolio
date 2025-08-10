@@ -13,10 +13,10 @@ const featuredProjectsData = [
   },
   {
     category: 'Back-End',
-    title: 'Sistema de Gerenciamento de Livros',
-    description: 'Uma aplicação que permite cadastrar, visualizar, editar e excluir livros, facilitando a organização de coleções literárias de forma eficiente.',
-    imageUrl: '/assets/images/Gerenciador_de_Biblioteca.jpg',
-    githubUrl: 'https://github.com/PArthur006/Sistema-de-Gerenciamento-de-Livros',
+    title: 'Sistema Integrado de Gestão Acadêmica',
+    description: 'O SIGA-FCTE é um sistema de desktop para gerenciamento acadêmico, desenvolvido em Java com a biblioteca Swing para a interface gráfica.',
+    imageUrl: '/assets/images/SIGA-FCTE.jpg',
+    githubUrl: 'https://github.com/PArthur006/Sistema-Integrado-de-Gestao-Academica',
     liveUrl: '#'
   },
   {

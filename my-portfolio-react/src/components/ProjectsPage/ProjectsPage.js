@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Courses from '../Courses/Courses';
 import Projects from '../Projects/Projects';
 import './ProjectsPage.css';
+import AOS from 'aos';
 
 const projectsData = [
   {
@@ -130,6 +131,10 @@ const coursesData = {
 function ProjectsPage() {
   const [activeCategory, setActiveCategory] = useState('Front-End');
 
+  useEffect(() => {
+    AOS.refresh();
+  }, [activeCategory]);
+
   const handleCategoryChange = (category) => {
     setActiveCategory(category);
   };
@@ -139,13 +144,15 @@ function ProjectsPage() {
 
   return (
     <div className="portfolio-page">
-      <div className="category-tabs">
+      <div className="category-tabs" data-aos="fade-down">
         <button onClick={() => handleCategoryChange('Front-End')} className={activeCategory === 'Front-End' ? 'active' : ''}>Front-End</button>
         <button onClick={() => handleCategoryChange('Back-End')} className={activeCategory === 'Back-End' ? 'active' : ''}>Back-End</button>
         <button onClick={() => handleCategoryChange('Game-Development')} className={activeCategory === 'Game-Development' ? 'active' : ''}>Game Dev & Outros</button>
       </div>
-      <Courses courses={filteredCourses} />
-      <Projects projects={filteredProjects} />
+      <div key={activeCategory} data-aos="fade-up">
+        <Courses courses={filteredCourses} />
+        <Projects projects={filteredProjects} />
+      </div>
     </div>
   );
 }

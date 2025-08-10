@@ -1,6 +1,6 @@
 /* Estilos do Cabeçalho de Navegação */
 #navbar {
-  background-color: #1e1e3f; /* Tom de roxo/azul escuro */
+  background: linear-gradient(45deg, #001935 30%,#2200ff94); /* Tom de roxo/azul escuro */
   padding: 1rem;
   position: fixed;
   top: 0;
@@ -10,13 +10,30 @@
 }
 
 #navbar a {
-  color: #61dafb; /* Azul claro */
-  margin: 0 15px;
+  color: #ffffff; /* Azul claro */
+  margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease-in-out;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  display: inline-block; /* Garante que o transform funcione bem */
 }
 
 #navbar a:hover {
-  color: #ffffff; /* Branco ao passar o mouse */
+  color: #ffffff; /* Branco puro para destaque */
+  transform: scale(1.2);
+  background-color: rgba(165, 197, 255, 0.1);
+}
+
+/* Media Query para Telas Menores */
+@media (max-width: 480px) {
+  #navbar {
+    padding: 1rem 0.5rem;
+    text-align: center;
+  }
+  #navbar a {
+    margin: 0 8px;
+    font-size: 0.9rem;
+  }
 }

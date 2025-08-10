@@ -37,22 +37,61 @@ section h1, section h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative; /* Essencial para conter as partículas */
+  overflow: hidden; /* Garante que as partículas não vazem */
+  background: radial-gradient(circle, rgba(42, 27, 139, 0.4) 0%, rgba(0, 25, 53, 0) 60%);
+}
+
+#welcome-section .particle-canvas {
+  position: absolute !important; /* Força o posicionamento correto */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Fica atrás do conteúdo */
+}
+
+.welcome-content {
+  position: relative;
+  z-index: 2; /* Fica na frente das partículas */
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 #welcome-section h1 {
   font-size: 3rem;
+  background-image: linear-gradient(45deg, rgb(165, 197, 255), #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text; /* Para compatibilidade com Safari */
+  color: transparent;
+}
+
+#featured-projects h2 {
+  color: #ffffff;
+  border-bottom: 2px solid #ffffff;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 40px;
 }
 
 /* Rodapé */
 footer {
-  padding: 20px;
-  background-color: #1e1e3f;
-  margin-top: 40px;
+  padding: 1px;
+  background: linear-gradient(45deg, #001935 30%,#2200ff94);
+  margin: auto;
 }
 
 footer a {
-  color: #61dafb;
+  color: rgb(182, 208, 255);
   text-decoration: none;
+  transition: transform 0.3s ease; /* Adicionado para animação suave */
+  display: inline-block;
+  padding: 0px 10px;
+}
+
+footer a:hover {
+  transform: scale(1.08);
+  text-decoration: underline;
 }
 
 /* Responsividade */

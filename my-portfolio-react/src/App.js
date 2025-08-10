@@ -29,7 +29,7 @@ function App() {
         </main>
 
         <footer>
-          <p>Todos os direitos reservados ao desenvolvedor
+          <p>Todos os direitos reservados ao desenvolvedor 
             <a href="https://github.com/PArthur006"> Pedro Arthur Rodrigues</a>
           </p>
         </footer>

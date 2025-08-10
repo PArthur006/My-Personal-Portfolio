@@ -9,19 +9,22 @@
 }
 
 .category-tabs button {
-  background-color: transparent;
-  border: 2px solid #61dafb;
-  color: #61dafb;
-  padding: 10px 20px;
+  background-color: #ffffff;
+  border: none;
+  color: rgb(31, 20, 104);
+  padding: 12px 25px;
   margin: 0 10px;
   border-radius: 5px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease, transform 0.3s ease; /* Adicionado transform */
   font-size: 1rem;
+  font-weight: bold;
 }
 
 .category-tabs button:hover,
 .category-tabs button.active {
-  background-color: #61dafb;
-  color: #121212;
+  background: linear-gradient(45deg, #001935 30%,#2200ff94);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(165, 197, 255, 0.5);
+  transform: scale(1.1); /* Adicionado scale */
 }
