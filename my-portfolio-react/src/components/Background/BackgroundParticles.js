@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
-const BackgroundParticles = () => {
+const BackgroundParticles = ({ theme }) => {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ const BackgroundParticles = () => {
           }
         },
         color: {
-          value: ['#ffffff', '#a5c5ff']
+          value: theme === 'light' ? ['#000000', '#555555'] : ['#ffffff', '#a5c5ff']
         },
         shape: {
           type: 'circle'
@@ -87,7 +87,7 @@ const BackgroundParticles = () => {
       },
       retina_detect: true
     }),
-    [],
+    [theme],
   );
 
   if (init) {

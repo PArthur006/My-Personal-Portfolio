@@ -1,6 +1,6 @@
 /* Estilos do Cabeçalho de Navegação */
 #navbar {
-  background: linear-gradient(45deg, #001935 30%,#2200ff94); /* Tom de roxo/azul escuro */
+  background: var(--header-bg); /* Tom de roxo/azul escuro */
   padding: 1rem;
   position: fixed;
   top: 0;
@@ -9,8 +9,14 @@
   z-index: 10;
 }
 
+#navbar nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #navbar a {
-  color: #ffffff; /* Azul claro */
+  color: var(--text-color); /* Azul claro */
   margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
@@ -21,9 +27,14 @@
 }
 
 #navbar a:hover {
-  color: #ffffff; /* Branco puro para destaque */
+  color: var(--link-color); /* Branco puro para destaque */
   transform: scale(1.2);
   background-color: rgba(165, 197, 255, 0.1);
+}
+
+.theme-switcher {
+  margin-left: auto;
+  margin-right: 20px; /* Adicionado margem à direita */
 }
 
 /* Media Query para Telas Menores */
