@@ -1,16 +1,26 @@
 import React from 'react';
 import './Projects.css';
 
-function Projects({ projects }) {
+function Projects({ projects, onProjectClick }) {
   return (
     <section id="projects">
       <h2>Meus Projetos</h2>
       <div className="project-grid">
         {projects.map((project, index) => (
-          <div className="project-card" key={index} data-aos="fade-up">
+          <div 
+            className="project-card"
+            key={index} 
+            data-aos="fade-up"
+            onClick={() => onProjectClick(project)}
+          >
             <img src={project.imageUrl} alt={project.title} />
             <div className="project-info">
               <h3>{project.title}</h3>
+              <div className="technologies">
+                {project.technologies && project.technologies.map((tech, i) => (
+                  <span key={i} className="tech-badge">{tech}</span>
+                ))}
+              </div>
               <p>{project.description}</p>
               <div className="project-links">
                 <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">GitHub</a>

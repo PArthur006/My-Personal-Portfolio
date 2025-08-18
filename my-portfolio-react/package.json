@@ -19,7 +19,8 @@
     "react-scripts": "^5.0.1",
     "react-slick": "^0.31.0",
     "slick-carousel": "^1.8.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yet-another-react-lightbox": "^3.25.0"
   },
   "scripts": {
     "start": "react-scripts start",

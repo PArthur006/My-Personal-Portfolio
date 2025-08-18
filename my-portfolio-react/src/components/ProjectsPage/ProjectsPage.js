@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Courses from '../Courses/Courses';
 import Projects from '../Projects/Projects';
+import ProjectModal from '../ProjectModal/ProjectModal';
+import Certifications from './Certifications/Certifications';
 import './ProjectsPage.css';
 import AOS from 'aos';
 
@@ -11,7 +13,9 @@ const projectsData = [
     description: 'Uma aplicação web que simula o fluxo de compra de passagens aéreas, permitindo ao usuário buscar voos, selecionar assentos em um mapa interativo e confirmar uma reserva.',
     imageUrl: '/assets/images/DECOLA-BRASIL.png',
     githubUrl: 'https://github.com/PArthur006/epf-decola',
-    liveUrl: '#' 
+    liveUrl: '#',
+    technologies: ['Python', 'Bottle', 'JavaScript', 'SQLite'],
+    carouselImages: []
   },
   {
     category: 'Front-End',
@@ -19,7 +23,9 @@ const projectsData = [
     description: 'Uma página personalizada que centraliza links importantes em um único lugar, proporcionando fácil acesso a redes sociais, projetos e contatos.',
     imageUrl: '/assets/images/My_Linktree.jpg',
     githubUrl: 'https://github.com/PArthur006/My-Linktree',
-    liveUrl: 'https://parthur006.github.io/My-Linktree'
+    liveUrl: 'https://parthur006.github.io/My-Linktree',
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    carouselImages: []
   },
   {
     category: 'Front-End',
@@ -27,7 +33,9 @@ const projectsData = [
     description: 'Um formulário interativo desenvolvido para coletar feedback dos usuários, seguindo boas práticas de acessibilidade e usabilidade.',
     imageUrl: '/assets/images/form_pesq-homepage.PNG',
     githubUrl: 'https://github.com/PArthur006/Estudos-FrontEnd/tree/main/WEB-DESING-RESPONSIVO/4.%20Formul%C3%A1rio%20de%20Registro',
-    liveUrl: '#'
+    liveUrl: '#',
+    technologies: ['HTML', 'CSS'],
+    carouselImages: []
   },
   {
     category: 'Front-End',
@@ -35,7 +43,9 @@ const projectsData = [
     description: 'Uma página informativa sobre o sistema operacional Android, destacando sua evolução, recursos e curiosidades, com um design moderno e responsivo.',
     imageUrl: '/assets/images/site_android_homepage.PNG',
     githubUrl: 'https://github.com/PArthur006/Site-Android',
-    liveUrl: 'https://parthur006.github.io/Site-Android/'
+    liveUrl: 'https://parthur006.github.io/Site-Android/',
+    technologies: ['HTML', 'CSS'],
+    carouselImages: []
   },
   {
     category: 'Front-End',
@@ -43,7 +53,9 @@ const projectsData = [
     description: 'Uma aplicação web desenvolvida durante a Trilha Iniciante da NLW Agents, que se integra diretamente com a API do Google Gemini para fornecer dicas e estratégias para jogos.',
     imageUrl: '/assets/images/AssistenteMeta.png',
     githubUrl: 'https://github.com/PArthur006/NLW-Agents-Iniciante',
-    liveUrl: '#'
+    liveUrl: '#',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'API', 'Gemini'],
+    carouselImages: []
   },
   {
     category: 'Back-End',
@@ -51,7 +63,9 @@ const projectsData = [
     description: 'Uma aplicação que permite cadastrar, visualizar, editar e excluir livros, facilitando a organização de coleções literárias de forma eficiente.',
     imageUrl: '/assets/images/Gerenciador_de_Biblioteca.jpg',
     githubUrl: 'https://github.com/PArthur006/Sistema-de-Gerenciamento-de-Livros',
-    liveUrl: '#'
+    liveUrl: '#',
+    technologies: ['C'],
+    carouselImages: []
   },
   {
     category: 'Back-End',
@@ -59,7 +73,9 @@ const projectsData = [
     description: 'O SIGA-FCTE é um sistema de desktop para gerenciamento acadêmico, desenvolvido em Java com a biblioteca Swing para a interface gráfica. O sistema permite o controle de alunos, disciplinas, turmas e avaliações.',
     imageUrl: '/assets/images/SIGA-FCTE.jpg',
     githubUrl: 'https://github.com/PArthur006/Sistema-Integrado-de-Gestao-Academica',
-    liveUrl: '#'
+    liveUrl: '#',
+    technologies: ['Java', 'Swing'],
+    carouselImages: []
   },
   {
     category: 'Game-Development',
@@ -67,7 +83,9 @@ const projectsData = [
     description: 'Um jogo 2D que mistura estratégia e ação, onde o jogador assume o papel de um cavaleiro em uma jornada desafiadora.',
     imageUrl: '/assets/images/Sunflower_Knight.jpg',
     githubUrl: 'https://github.com/PArthur006/Sunflower-Knight',
-    liveUrl: '#'
+    liveUrl: '#',
+    technologies: ['GDScript', 'Godot Engine'],
+    carouselImages: []
   },
   {
     category: 'Game-Development',
@@ -75,7 +93,9 @@ const projectsData = [
     description: 'Jogo 2D criado com a engine Godot para aprendizado da linguagem GDScript e da interface. O jogo é uma aventura 2D com uma fase, inimigos e um chefão, com um sistema de vidas e coleta de moedas.',
     imageUrl: '/assets/images/Adventure_Dash.png',
     githubUrl: 'https://github.com/PArthur006/Adventure-Dash',
-    liveUrl: '#'
+    liveUrl: '#',
+    technologies: ['GDScript', 'Godot Engine'],
+    carouselImages: []
   }
 ];
 
@@ -130,6 +150,7 @@ const coursesData = {
 
 function ProjectsPage() {
   const [activeCategory, setActiveCategory] = useState('Front-End');
+  const [selectedProject, setSelectedProject] = useState(null);
 
   useEffect(() => {
     AOS.refresh();
@@ -137,6 +158,14 @@ function ProjectsPage() {
 
   const handleCategoryChange = (category) => {
     setActiveCategory(category);
+  };
+
+  const handleProjectClick = (project) => {
+    setSelectedProject(project);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedProject(null);
   };
 
   const filteredProjects = projectsData.filter(project => project.category === activeCategory);
@@ -151,8 +180,13 @@ function ProjectsPage() {
       </div>
       <div key={activeCategory} data-aos="fade-up">
         <Courses courses={filteredCourses} />
-        <Projects projects={filteredProjects} />
+        <Projects 
+          projects={filteredProjects} 
+          onProjectClick={handleProjectClick} 
+        />
+        <Certifications />
       </div>
+      <ProjectModal project={selectedProject} onClose={handleCloseModal} />
     </div>
   );
 }
