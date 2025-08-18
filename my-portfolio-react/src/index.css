@@ -1,3 +1,21 @@
+:root {
+  --background-color: #001430;
+  --text-color: white;
+  --header-bg: rgba(0, 21, 62, 0.8);
+  --card-bg: linear-gradient(45deg, #001935 30%,#2200ff94);
+  --link-color: #61dafb;
+  --border-color: #ffffff;
+}
+
+[data-theme='light'] {
+  --background-color: #f0f2f5;
+  --text-color: #1c1e21;
+  --header-bg: rgba(255, 255, 255, 0.8);
+  --card-bg: #ffffff;
+  --link-color: #0d8bf2;
+  --border-color: #1c1e21;
+}
+
 body {
   margin: 0;
   font-family: 'Trebuchet MS', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,8 +23,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #002150;
-  color: white;
+  background: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 code {
