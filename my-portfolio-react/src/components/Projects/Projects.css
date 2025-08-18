@@ -5,8 +5,8 @@
 }
 
 #projects h2 {
-  color: #ffffff;
-  border-bottom: 2px solid #ffffff;
+  color: var(--text-color);
+  border-bottom: 2px solid var(--text-color);
   display: inline-block;
   padding-bottom: 5px;
   margin-bottom: 40px;
@@ -21,7 +21,7 @@
 }
 
 .project-card {
-  background: linear-gradient(45deg, #001935 30%,#2200ff94);
+  background: var(--card-bg);
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -31,6 +31,7 @@
   backface-visibility: hidden;
   transform: translateY(0); /* Define um estado inicial explícito para o transform */
   will-change: transform, box-shadow;
+  cursor: pointer;
 }
 
 .project-card[data-aos]:hover {
@@ -49,8 +50,25 @@
 }
 
 .project-info h3 {
-  color: #ffffff;
+  color: var(--text-color);
   margin-top: 0;
+}
+
+.technologies {
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.tech-badge {
+  background-color: var(--link-color);
+  color: var(--background-color);
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8em;
+  font-weight: 600;
 }
 
 .project-links {
@@ -58,8 +76,8 @@
 }
 
 .project-links a {
-  color: rgb(31, 20, 104);
-  background-color: #ffffff;
+  color: var(--background-color);
+  background-color: var(--text-color);
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
@@ -68,8 +86,8 @@
 }
 
 .project-links a:hover {
-  background-color: rgba(42, 27, 139, 0.548);
-  color: #ffffff;
+  background-color: var(--link-color);
+  color: var(--text-color);
   transform: scale(1.1);
 }
 

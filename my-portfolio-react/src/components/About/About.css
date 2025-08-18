@@ -5,46 +5,47 @@
 }
 
 #about h2 {
-  color: #ffffff;
-  border-bottom: 2px solid #ffffff;
+  color: var(--text-color);
+  border-bottom: 2px solid var(--text-color);
   display: inline-block;
   padding-bottom: 5px;
   margin-bottom: 40px;
 }
 
-.carousel-container {
+/* Usando um seletor específico para evitar conflitos com estilos globais */
+#about .carousel-container {
   max-width: 800px;
   margin: 0 auto;
-  background: linear-gradient(45deg, #001935 30%,#2200ff94);
+  background: var(--card-bg);
   padding: 40px;
   border-radius: 8px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(165, 197, 255, 0.4);
 }
 
-.slide-content {
-  color: #e0e0e0;
+#about .slide-content {
+  color: var(--text-color);
   padding: 0px;
 }
 
-.slide-content h3 {
-  color: #ffffff;
+#about .slide-content h3 {
+  color: var(--text-color);
   margin-bottom: 20px;
   font-size: 1.8rem;
 }
 
-.slide-content p {
+#about .slide-content p {
   font-size: 1.1rem;
   line-height: 1.6;
 }
 
 /* Estilizando os pontos de navegação do Slick */
-.slick-dots li button:before {
+#about .slick-dots li button:before {
   font-size: 12px;
-  color: #ffffff;
+  color: var(--text-color);
 }
 
-.slick-dots li.slick-active button:before {
-  color: rgb(165, 197, 255);
+#about .slick-dots li.slick-active button:before {
+  color: var(--link-color);
 }
 
 /* Media Query para Telas Menores */
@@ -53,15 +54,15 @@
     padding: 40px 10px;
   }
 
-  .carousel-container {
+  #about .carousel-container {
     padding: 20px;
   }
 
-  .slide-content h3 {
+  #about .slide-content h3 {
     font-size: 1.5rem;
   }
 
-  .slide-content p {
+  #about .slide-content p {
     font-size: 1rem;
   }
 }
@@ -70,13 +71,13 @@
 .skills-section {
   margin-top: 60px;
   padding: 40px 20px;
-  background: linear-gradient(45deg, #001935 30%,#2200ff94);
+  background: var(--card-bg);
   border-radius: 8px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5), 0 0 15px rgba(165, 197, 255, 0.4);
 }
 
 .skills-section h3 {
-  color: #ffffff;
+  color: var(--text-color);
   margin-bottom: 30px;
   font-size: 1.8rem;
 }
@@ -112,7 +113,7 @@
 
 .skill-item p {
   font-size: 1rem;
-  color: #ffffff;
+  color: var(--text-color);
   margin: 0;
 }
 
@@ -120,7 +121,7 @@
 .skill-text-icon {
   font-size: 2.5rem; /* Um pouco menor que os ícones para caber */
   font-weight: bold;
-  color: #ffffff; /* Cor padrão para texto-ícone */
+  color: var(--text-color); /* Cor padrão para texto-ícone */
   margin-bottom: 10px;
   line-height: 1;
 }

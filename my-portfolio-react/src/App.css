@@ -1,4 +1,3 @@
-
 /* Estilos globais */
 body {
   margin: 0;
@@ -7,8 +6,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #121212; /* Fundo escuro */
-  color: #e0e0e0; /* Texto claro */
+  background-color: var(--background-color); /* Fundo escuro */
+  color: var(--text-color); /* Texto claro */
 }
 
 .App {
@@ -24,11 +23,11 @@ main {
 
 section {
   padding: 60px 20px;
-  border-bottom: 1px solid #333; /* Linha sutil para separar seções */
+  border-bottom: 1px solid var(--border-color); /* Linha sutil para separar seções */
 }
 
 section h1, section h2 {
-  color: #61dafb; /* Azul claro para títulos */
+  color: var(--link-color); /* Azul claro para títulos */
 }
 
 #welcome-section {
@@ -54,8 +53,76 @@ section h1, section h2 {
 .welcome-content {
   position: relative;
   z-index: 2; /* Fica na frente das partículas */
-  color: white;
+  color: var(--text-color);
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos globais */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color); /* Fundo escuro */
+  color: var(--text-color); /* Texto claro */
+}
+
+.App {
+  text-align: center;
+}
+
+
+
+/* Estilos das Seções */
+main {
+  padding-top: 80px; /* Espaço para o cabeçalho fixo */
+}
+
+section {
+  padding: 60px 20px;
+  border-bottom: 1px solid var(--border-color); /* Linha sutil para separar seções */
+}
+
+section h1, section h2 {
+  color: var(--link-color); /* Azul claro para títulos */
+}
+
+#welcome-section {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Essencial para conter as partículas */
+  overflow: hidden; /* Garante que as partículas não vazem */
+  background: radial-gradient(circle, rgba(42, 27, 139, 0.4) 0%, rgba(0, 25, 53, 0) 60%);
+}
+
+#welcome-section .particle-canvas {
+  position: absolute !important; /* Força o posicionamento correto */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Fica atrás do conteúdo */
+}
+
+.welcome-content {
+  position: relative;
+  z-index: 2; /* Fica na frente das partículas */
+  color: var(--text-color);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid var(--text-color);
+  object-fit: cover;
+  margin-bottom: 20px;
 }
 
 #welcome-section h1 {
@@ -67,8 +134,8 @@ section h1, section h2 {
 }
 
 #featured-projects h2 {
-  color: #ffffff;
-  border-bottom: 2px solid #ffffff;
+  color: var(--text-color);
+  border-bottom: 2px solid var(--text-color);
   display: inline-block;
   padding-bottom: 5px;
   margin-bottom: 40px;
@@ -77,12 +144,61 @@ section h1, section h2 {
 /* Rodapé */
 footer {
   padding: 1px;
-  background: linear-gradient(45deg, #001935 30%,#2200ff94);
+  background: var(--card-bg);
   margin: auto;
 }
 
 footer a {
-  color: rgb(182, 208, 255);
+  color: var(--link-color);
+  text-decoration: none;
+  transition: transform 0.3s ease; /* Adicionado para animação suave */
+  display: inline-block;
+  padding: 0px 10px;
+}
+
+footer a:hover {
+  transform: scale(1.08);
+  text-decoration: underline;
+}
+
+[data-theme='light'] #welcome-section {
+  background: radial-gradient(circle, rgba(42, 27, 139, 0.1) 0%, rgba(0, 25, 53, 0) 60%);
+}
+
+[data-theme='light'] .welcome-content {
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme='light'] #welcome-section h1 {
+  background-image: linear-gradient(45deg, #0d8bf2, #0056b3);
+}
+
+
+#welcome-section h1 {
+  font-size: 3rem;
+  background-image: linear-gradient(45deg, rgb(165, 197, 255), #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text; /* Para compatibilidade com Safari */
+  color: transparent;
+}
+
+#featured-projects h2 {
+  color: var(--text-color);
+  border-bottom: 2px solid var(--text-color);
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 40px;
+}
+
+/* Rodapé */
+footer {
+  padding: 1px;
+  background: var(--card-bg);
+  margin: auto;
+}
+
+footer a {
+  color: var(--link-color);
   text-decoration: none;
   transition: transform 0.3s ease; /* Adicionado para animação suave */
   display: inline-block;

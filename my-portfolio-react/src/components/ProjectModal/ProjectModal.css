@@ -1,0 +1,101 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.modal-overlay.open {
+  opacity: 1;
+}
+
+.modal-content {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  color: var(--text-color);
+  text-align: center;
+  transform: scale(0.95);
+  transition: transform 0.3s ease-in-out;
+}
+
+.modal-overlay.open .modal-content {
+  transform: scale(1);
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--text-color);
+  color: var(--background-color);
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-container {
+  margin: 20px 0;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 400px; 
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+.modal-content h2 {
+  margin-bottom: 15px;
+}
+
+.modal-technologies {
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Slick Carousel overrides */
+.slick-prev:before,
+.slick-next:before {
+  color: var(--link-color); /* Altera a cor das setas */
+}
+
+.slick-dots li button:before {
+  color: var(--text-color); /* Altera a cor dos pontos */
+  font-size: 10px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: var(--link-color); /* Altera a cor do ponto ativo */
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 20px;
+  }
+  .carousel-image {
+    height: 250px;
+  }
+}

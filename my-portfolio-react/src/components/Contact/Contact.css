@@ -6,8 +6,8 @@
 }
 
 #contact h2 {
-  color: #ffffff;
-  border-bottom: 2px solid #ffffff;
+  color: var(--text-color);
+  border-bottom: 2px solid var(--text-color);
   display: inline-block;
   padding-bottom: 5px;
   margin-bottom: 40px;
@@ -20,7 +20,7 @@
   max-width: 600px;
   margin: 0 auto 40px auto; /* Centraliza o formulário e adiciona margem inferior */
   padding: 20px;
-  background: linear-gradient(45deg, #001935 30%,#2200ff94);
+  background: var(--card-bg);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -29,10 +29,10 @@
 .contact-form input[type="email"],
 .contact-form textarea {
   padding: 15px;
-  border: 1px solid #333;
+  border: 1px solid var(--border-color);
   border-radius: 5px;
-  background-color: #001935;
-  color: #e0e0e0;
+  background-color: var(--background-color);
+  color: var(--text-color);
   font-size: 1rem;
 }
 
@@ -42,8 +42,8 @@
 }
 
 .contact-form button[type="submit"] {
-  background-color: #ffffff;
-  color: rgb(31, 20, 104);
+  background-color: var(--text-color);
+  color: var(--background-color);
   padding: 15px 25px;
   border: none;
   border-radius: 5px;
@@ -54,8 +54,8 @@
 }
 
 .contact-form button[type="submit"]:hover {
-  background-color: rgba(42, 27, 139, 0.548);
-  color: #ffffff;
+  background-color: var(--link-color);
+  color: var(--text-color);
   transform: scale(1.1);
 }
 
@@ -84,21 +84,21 @@
 }
 
 .contact-links a {
-  color: #e0e0e0;
+  color: var(--text-color);
   text-decoration: none;
   font-size: 1.2rem;
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 15px 25px;
-  background: linear-gradient(45deg, #001935 30%,#2200ff94);
+  background: var(--card-bg);
   border-radius: 8px;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .contact-links a:hover {
-  background-color: rgba(42, 27, 139, 0.548);
-  color: #ffffff;
+  background-color: var(--link-color);
+  color: var(--text-color);
   transform: scale(1.1);
 }
 

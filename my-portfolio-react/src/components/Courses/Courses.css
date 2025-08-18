@@ -5,8 +5,8 @@
 }
 
 #courses h2 {
-  color: #ffffff;
-  border-bottom: 2px solid #ffffff;
+  color: var(--text-color);
+  border-bottom: 2px solid var(--text-color);
   display: inline-block;
   padding-bottom: 5px;
   margin-bottom: 40px;
@@ -22,7 +22,7 @@
 }
 
 .course-category h3 {
-  color: #ffffff;
+  color: var(--text-color);
   font-size: 1.8rem;
   text-align: left;
   border-bottom: 1px solid #555;
@@ -40,7 +40,7 @@
 }
 
 .cert-card {
-  background: linear-gradient(45deg, #001935 30%,#2200ff94);
+  background: var(--card-bg);
   padding: 20px;
   border-radius: 8px;
   text-align: left;
@@ -63,7 +63,7 @@
 }
 
 .cert-card h4 {
-  color: #ffffff;
+  color: var(--text-color);
   margin-top: 0;
   display: flex;
   align-items: center;
