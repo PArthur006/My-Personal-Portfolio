@@ -39,12 +39,12 @@ function ProjectModal({ project, onClose }) {
           <Slider {...settings}>
             {project.carouselImages && project.carouselImages.length > 0 ? (
               project.carouselImages.map((img, index) => (
-                <div key={index}>
+                <div key={index} className="carousel-image-wrapper">
                   <img src={img} alt={`${project.title} screenshot ${index + 1}`} className="carousel-image" />
                 </div>
               ))
             ) : (
-              <div>
+              <div className="carousel-image-wrapper">
                 <img src={project.imageUrl} alt={project.title} className="carousel-image" />
                 <p>Mais imagens serão adicionadas em breve.</p>
               </div>

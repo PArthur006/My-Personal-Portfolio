@@ -2,7 +2,7 @@
   --background-color: #001430;
   --text-color: white;
   --header-bg: rgba(0, 21, 62, 0.8);
-  --card-bg: linear-gradient(45deg, #001935 30%,#2200ff94);
+  --card-bg: linear-gradient(0deg, #001935,#2200ff94);
   --link-color: #61dafb;
   --border-color: #ffffff;
 }

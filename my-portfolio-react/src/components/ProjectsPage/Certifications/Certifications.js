@@ -38,6 +38,16 @@ const certificationsData = [
     image: '/assets/images/certifications/OSJC_WebDesigner.png',
     title: 'WebDesigner (HTML, CSS & JavaScript)',
     issuer: 'Microsoft'
+  },
+  {
+    image: '/assets/images/certifications/Alura_Imersao_Dados_Python.png',
+    title: 'Imersão de Dados com Python',
+    issuer: 'Alura'
+  },
+  {
+    image: '/assets/images/certifications/DIO_Intro-ao-React.png',
+    title: 'Introdução ao React.png',
+    issuer: 'Digital Inovation One'
   }
 ];
 

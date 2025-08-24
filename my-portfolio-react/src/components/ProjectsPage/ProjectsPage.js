@@ -25,7 +25,15 @@ const projectsData = [
     githubUrl: 'https://github.com/PArthur006/My-Linktree',
     liveUrl: 'https://parthur006.github.io/My-Linktree',
     technologies: ['HTML', 'CSS', 'JavaScript'],
-    carouselImages: []
+    carouselImages: [
+      '/assets/images/carousel/My-Linktree/My_Linktree.jpg',
+      '/assets/images/carousel/My-Linktree/Linktree_telaInicial_pc.PNG',
+      '/assets/images/carousel/My-Linktree/Linktree_telaInicial_mobile.jpg',
+      '/assets/images/carousel/My-Linktree/Linktree_codigoHTML.PNG',
+      '/assets/images/carousel/My-Linktree/Linktree_codigoCSS1.PNG',
+      '/assets/images/carousel/My-Linktree/Linktree_codigoCSS2.PNG',
+      '/assets/images/carousel/My-Linktree/Linktree_codigoHTML-CSS_Atualizado.PNG'
+    ]
   },
   {
     category: 'Front-End',
@@ -35,7 +43,11 @@ const projectsData = [
     githubUrl: 'https://github.com/PArthur006/Estudos-FrontEnd/tree/main/WEB-DESING-RESPONSIVO/4.%20Formul%C3%A1rio%20de%20Registro',
     liveUrl: '#',
     technologies: ['HTML', 'CSS'],
-    carouselImages: []
+    carouselImages: [
+      '/assets/images/carousel/Formulario-FreeCodeCamp/form_pesq-homepage.PNG',
+      '/assets/images/carousel/Formulario-FreeCodeCamp/form_pesq-codigo-HTML.PNG',
+      '/assets/images/carousel/Formulario-FreeCodeCamp/form_pesq-codigo-CSS.PNG'
+    ]
   },
   {
     category: 'Front-End',
@@ -45,7 +57,12 @@ const projectsData = [
     githubUrl: 'https://github.com/PArthur006/Site-Android',
     liveUrl: 'https://parthur006.github.io/Site-Android/',
     technologies: ['HTML', 'CSS'],
-    carouselImages: []
+    carouselImages: [
+      '/assets/images/carousel/Site-Android/site_android_homepage.PNG',
+      '/assets/images/carousel/Site-Android/site_android_homepage_responsivo.PNG',
+      '/assets/images/carousel/Site-Android/site_android_lista.PNG',
+      '/assets/images/carousel/Site-Android/site_android_codigo.PNG'
+    ]
   },
   {
     category: 'Front-End',
@@ -96,6 +113,16 @@ const projectsData = [
     liveUrl: '#',
     technologies: ['GDScript', 'Godot Engine'],
     carouselImages: []
+  },
+  {
+    category: 'Back-End',
+    title: 'Dashboard de Análise de Dados',
+    description: 'O dashboard oferece uma ferramenta visual para explorar tendências salariais na área de dados. Usuários podem filtrar por ano, experiência, contrato e tamanho da empresa.',
+    imageUrl: '/assets/images/Dashboard_Python_Dados.png',
+    githubUrl: 'https://github.com/PArthur006/Dashboard-de-Analise-de-Dados-com-Python',
+    liveUrl: '#',
+    technologies: ['Python', 'Pandas', 'Streamlit', 'Plotly'],
+    carouselImages: ['/assets/images/carousel/Dashboard-Python-Dados/Dashboard_Python_Dados.png']
   }
 ];
 

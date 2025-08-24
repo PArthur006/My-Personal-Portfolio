@@ -14,18 +14,20 @@ const skillsData = [
   { name: 'CSS3', IconComponent: FaCss3Alt },
   { name: 'JavaScript', IconComponent: DiJavascript1 },
   { name: 'React', IconComponent: FaReact },
+  { name: 'JSON', IconComponent: SiJson },
   { name: 'Node.js', IconComponent: FaNodeJs },
   { name: 'Python', IconComponent: FaPython },
   { name: 'Java', IconComponent: FaJava },
-  { name: 'Git', IconComponent: FaGitAlt },
   { name: 'C', textIcon: 'C' }, // Fallback para texto
   { name: 'C++', textIcon: 'C++' }, // Fallback para texto
-  { name: 'Godot Engine', IconComponent: SiGodotengine },
+  { name: 'C#', textIcon: 'C#' },
+  { name: '.NET', textIcon: '.NET' },
   { name: 'Linux', IconComponent: FaLinux },
-  { name: 'Figma', IconComponent: FaFigma },
-  { name: 'SQL', IconComponent: FaDatabase },
+  { name: 'Godot Engine', IconComponent: SiGodotengine },
+  { name: 'Git', IconComponent: FaGitAlt },
   { name: 'Docker', IconComponent: FaDocker },
-  { name: 'JSON', IconComponent: SiJson },
+  { name: 'SQL', IconComponent: FaDatabase },
+  { name: 'Figma', IconComponent: FaFigma },
 ];
 
 function About() {
