@@ -46,8 +46,18 @@ const certificationsData = [
   },
   {
     image: '/assets/images/certifications/DIO_Intro-ao-React.png',
-    title: 'Introdução ao React.png',
+    title: 'Introdução ao React',
     issuer: 'Digital Inovation One'
+  },
+  {
+    image: '/assets/images/certifications/Akad_Fullstack_Developer.png',
+    title: 'Akad - FullStack Developer',
+    issuer: 'Digital Inovation One'
+  },
+  {
+    image: '/assets/images/certifications/Gerenciamento_de_Ameacas_Ciberneticas.png',
+    title: 'Gerenciamento de Ameaças Cibernéticas',
+    issuer: 'Cisco Networking Academy'
   }
 ];
 

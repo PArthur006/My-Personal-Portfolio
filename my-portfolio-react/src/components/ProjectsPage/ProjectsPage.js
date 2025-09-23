@@ -148,7 +148,7 @@ const coursesData = {
   'Back-End': [
     {
       institution: 'Curso em Vídeo',
-      items: ['Algoritmo', 'Python 3 - Mundos 1, 2 e 3', 'Java: Básico e POO', 'Git e GitHub']
+      items: ['Algoritmo', 'Python 3 - Mundos 1, 2 e 3', 'Java: Básico e POO', 'Segurança da Informação - Introdução a Segurança da Informação', 'Git e GitHub']
     },
     {
       institution: 'Udemy',
