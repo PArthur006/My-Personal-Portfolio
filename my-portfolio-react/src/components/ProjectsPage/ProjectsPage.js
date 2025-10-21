@@ -137,6 +137,10 @@ const coursesData = {
       items: ['Curso Web Moderno Completo']
     },
     {
+      institution: 'DIO - Digital Inovation One',
+      items: ['Biblioteca React.js', 'Akad - Fullstack Developer', 'Versionamento de Código com Git e GitHub']
+    },
+    {
       institution: 'Fundação Bradesco',
       items: ['Fundamentos do Design Gráfico', 'HTML - Básico', 'Crie um site simples usando HTML, CSS e Javascript']
     },
@@ -148,7 +152,11 @@ const coursesData = {
   'Back-End': [
     {
       institution: 'Curso em Vídeo',
-      items: ['Algoritmo', 'Python 3 - Mundos 1, 2 e 3', 'Java: Básico e POO', 'Segurança da Informação - Introdução a Segurança da Informação', 'Git e GitHub']
+      items: ['Algoritmo', 'Python 3 - Mundos 1, 2 e 3', 'Java: Básico e POO', 'Segurança da Informação - Introdução a Segurança da Informação','MySQL',  'Git e GitHub']
+    },
+    {
+      institution: 'DIO - Digital Inovation One',
+      items: ['Akad - Fullstack Developer', 'Linguagem C# e Orientação à Objetos', 'Introdução à Engenharia de Prompts e GitHub Copilor', 'Desenvolvimento de APIs com .NET', 'Linguagem Java']
     },
     {
       institution: 'Udemy',
