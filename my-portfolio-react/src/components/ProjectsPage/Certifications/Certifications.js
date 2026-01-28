@@ -7,59 +7,7 @@ import "yet-another-react-lightbox/plugins/captions.css";
 import './Certifications.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-const certificationsData = [
-  {
-    image: '/assets/images/certifications/FB_Fund-Design-Grafico.png',
-    title: 'Fundamentos do Design Gráfico',
-    issuer: 'Fundação Bradesco'
-  },
-  {
-    image: '/assets/images/certifications/IFRS_POO.png',
-    title: 'Linguagens de Programação Orientada a Objetos',
-    issuer: 'Instituto Federal Sul-rio-grandense'
-  },
-  {
-    image: '/assets/images/certifications/NLWAgents.png',
-    title: 'NLW Agents',
-    issuer: 'Rocketseat'
-  },
-  {
-    image: '/assets/images/certifications/FB_HTML-Basico.png',
-    title: 'HTML Básico',
-    issuer: 'Fundação Bradesco'
-  },
-  {
-    image: '/assets/images/certifications/SOA_Google-IA.png',
-    title: 'Google: Inteligência Artificial e Produtividade',
-    issuer: 'Santander Open Academy'
-  },
-  {
-    image: '/assets/images/certifications/OSJC_WebDesigner.png',
-    title: 'WebDesigner (HTML, CSS & JavaScript)',
-    issuer: 'Microsoft'
-  },
-  {
-    image: '/assets/images/certifications/Alura_Imersao_Dados_Python.png',
-    title: 'Imersão de Dados com Python',
-    issuer: 'Alura'
-  },
-  {
-    image: '/assets/images/certifications/DIO_Intro-ao-React.png',
-    title: 'Introdução ao React',
-    issuer: 'Digital Inovation One'
-  },
-  {
-    image: '/assets/images/certifications/Akad_Fullstack_Developer.png',
-    title: 'Akad - FullStack Developer',
-    issuer: 'Digital Inovation One'
-  },
-  {
-    image: '/assets/images/certifications/Gerenciamento_de_Ameacas_Ciberneticas.png',
-    title: 'Gerenciamento de Ameaças Cibernéticas',
-    issuer: 'Cisco Networking Academy'
-  }
-];
+import certificationsData from '../../../data/certificationsData';
 
 function Certifications() {
   const [open, setOpen] = useState(false);
@@ -70,22 +18,27 @@ function Certifications() {
     setOpen(true);
   };
 
+  const itemCount = certificationsData.length;
+  const defaultSlidesToShow = 3;
+  const slidesToShow = Math.min(defaultSlidesToShow, Math.max(1, itemCount));
+  const isInfinite = itemCount > slidesToShow;
+
   const settings = {
     dots: false,
-    infinite: true,
+    infinite: isInfinite,
     arrows: false,
-    speed: 8000,
-    autoplay: true,
-    autoplaySpeed: 0,
-    slidesToShow: 3,
+    speed: isInfinite ? 8000 : 600,
+    autoplay: itemCount > 1,
+    autoplaySpeed: isInfinite ? 100 : 3000,
+    slidesToShow,
     slidesToScroll: 1,
-    cssEase: "linear",
+    cssEase: isInfinite ? 'linear' : 'ease',
     pauseOnHover: true,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: Math.min(2, slidesToShow),
         }
       },
       {

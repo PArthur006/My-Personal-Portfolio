@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 // Importando ícones da react-icons
 import skillsData from '../../data/skillsData';
+import aboutData from '../../data/aboutData';
 
 function About() {
   const settings = {
@@ -25,37 +26,21 @@ function About() {
       <h2>Sobre Mim</h2>
       <div className="carousel-container">
         <Slider {...settings}>
-          <div className="slide-content">
-            <h3>🏛️ Formação e Carreira</h3>
-            <p>
-              <strong>Focado em Engenharia de Dados e Segurança</strong>.<br/>Minha trajetória é pautada pela transição do desenvolvimento técnico para a arquitetura de soluções robustas.
-            </p>
-            <ul>
-              <li><strong>UnB:</strong> Estudante de Engenharia de Software.</li>
-              <li><strong>First Decision:</strong> Estagiário em Migração de Dados, IA e Nuvem.</li>
-              <li><strong>SENAI:</strong> Qualificação Profissional em Desenvolvimento Full-Stack.</li>
-            </ul>
-          </div>
-
-          <div className="slide-content">
-            <h3>⚙️ Engenharia de Dados e Infraestrutura</h3>
-            <p>
-              Utilizei o <strong>Desenvolvimento Web (React)</strong> para entender a interface, mas hoje meu foco está onde o valor real reside: na <strong>Engenharia de Dados e Nuvem</strong>.
-            </p>
-            <p>
-              Especializo-me em <strong>SQL, ETL e Cloud Computing</strong> para garantir que a informação seja processada de forma escalável e eficiente, sustentando decisões inteligentes de negócio.
-            </p>
-          </div>
-
-          <div className="slide-content">
-            <h3>🛡️ Foco: Segurança de Dados</h3>
-            <p>
-              O dado só tem valor se estiver protegido. Estudo ativamente <strong>Cibersegurança</strong> (Cisco, Google, Linux) para integrar a segurança desde a concepção do código até o armazenamento final.
-            </p>
-            <p>
-              Meu objetivo é a <strong>Segurança de Dados</strong>, unindo a visão do software com a proteção de infraestruturas críticas (SAP e Cloud). <strong>Explore meus projetos técnicos abaixo.</strong>
-            </p>
-          </div>
+          {aboutData.slides.map((slide, idx) => (
+            <div className="slide-content" key={idx}>
+              <h3>{slide.title}</h3>
+              {slide.paragraphs && slide.paragraphs.map((p, pIdx) => (
+                <p key={pIdx}>{p}</p>
+              ))}
+              {slide.list && (
+                <ul>
+                  {slide.list.map((item, iIdx) => (
+                    <li key={iIdx}><strong>{item.label}:</strong> {item.text}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
         </Slider>
       </div>
 

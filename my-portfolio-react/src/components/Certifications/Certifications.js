@@ -7,39 +7,7 @@ import "yet-another-react-lightbox/plugins/captions.css";
 import './Certifications.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-const certificationsData = [
-  {
-    image: '/assets/images/certifications/FB_Fund-Design-Grafico.png',
-    title: 'Fundamentos do Design Gráfico',
-    issuer: 'Fundação Bradesco'
-  },
-  {
-    image: '/assets/images/certifications/IFRS_POO.png',
-    title: 'Linguagens de Programação Orientada a Objetos',
-    issuer: 'Instituto Federal Sul-rio-grandense'
-  },
-  {
-    image: '/assets/images/certifications/NLWAgents.png',
-    title: 'NLW Agents',
-    issuer: 'Rocketseat'
-  },
-  {
-    image: '/assets/images/certifications/FB_HTML-Basico.png',
-    title: 'HTML Básico',
-    issuer: 'Fundação Bradesco'
-  },
-  {
-    image: '/assets/images/certifications/SOA_Google-IA.png',
-    title: 'Google: Inteligência Artificial e Produtividade',
-    issuer: 'Santander Open Academy'
-  },
-  {
-    image: '/assets/images/certifications/OSJC_WebDesigner.png',
-    title: 'WebDesigner (HTML, CSS & JavaScript)',
-    issuer: 'Microsoft'
-  }
-];
+import certificationsData from '../../data/certificationsData';
 
 function Certifications() {
   const [open, setOpen] = useState(false);
@@ -50,20 +18,25 @@ function Certifications() {
     setOpen(true);
   };
 
+  const itemCount = certificationsData.length;
+  const defaultSlidesToShow = 3;
+  const slidesToShow = Math.min(defaultSlidesToShow, Math.max(1, itemCount));
+  const isInfinite = itemCount > slidesToShow;
+
   const settings = {
-    dots: true,
-    infinite: true,
-    speed: 5000,
-    autoplay: true,
-    autoplaySpeed: 1000,
-    slidesToShow: 3,
-    slidesToScroll: 2,
-    cssEase: "linear",
+    dots: itemCount > 1,
+    infinite: isInfinite,
+    speed: isInfinite ? 5000 : 600,
+    autoplay: itemCount > 1,
+    autoplaySpeed: isInfinite ? 1000 : 3000,
+    slidesToShow,
+    slidesToScroll: 1,
+    cssEase: isInfinite ? 'linear' : 'ease',
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: Math.min(2, slidesToShow),
         }
       },
       {
