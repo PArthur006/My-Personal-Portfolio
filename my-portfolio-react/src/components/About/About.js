@@ -5,30 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 // Importando ícones da react-icons
-import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaPython, FaJava, FaGitAlt, FaLinux, FaFigma, FaDatabase, FaDocker } from 'react-icons/fa';
-import { SiGodotengine, SiJson } from 'react-icons/si'; 
-import { DiJavascript1 } from 'react-icons/di'; 
-
-const skillsData = [
-  { name: 'HTML5', IconComponent: FaHtml5 },
-  { name: 'CSS3', IconComponent: FaCss3Alt },
-  { name: 'JavaScript', IconComponent: DiJavascript1 },
-  { name: 'React', IconComponent: FaReact },
-  { name: 'JSON', IconComponent: SiJson },
-  { name: 'Node.js', IconComponent: FaNodeJs },
-  { name: 'Python', IconComponent: FaPython },
-  { name: 'Java', IconComponent: FaJava },
-  { name: 'C', textIcon: 'C' }, // Fallback para texto
-  { name: 'C++', textIcon: 'C++' }, // Fallback para texto
-  { name: 'C#', textIcon: 'C#' },
-  { name: '.NET', textIcon: '.NET' },
-  { name: 'Linux', IconComponent: FaLinux },
-  { name: 'Godot Engine', IconComponent: SiGodotengine },
-  { name: 'Git', IconComponent: FaGitAlt },
-  { name: 'Docker', IconComponent: FaDocker },
-  { name: 'SQL', IconComponent: FaDatabase },
-  { name: 'Figma', IconComponent: FaFigma },
-];
+import skillsData from '../../data/skillsData';
 
 function About() {
   const settings = {
@@ -71,18 +48,45 @@ function About() {
 
       <div className="skills-section" data-aos="fade-up">
         <h3>Minhas Habilidades Técnicas</h3>
-        <div className="skills-grid">
-          {skillsData.map((skill, index) => (
-            <div className="skill-item" key={index}>
-              {skill.IconComponent ? (
-                <skill.IconComponent size={48} />
-              ) : (
-                <span className="skill-text-icon">{skill.textIcon}</span>
-              )}
-              <p>{skill.name}</p>
-            </div>
-          ))}
-        </div>
+        <Slider
+          dots={true}
+          infinite={true}
+          speed={500}
+          slidesToShow={1}
+          slidesToScroll={1}
+          arrows={false}
+          autoplay={true}
+          autoplaySpeed={10000}
+          className="skills-categories-carousel"
+        >
+          {skillsData.map((category, idx) => {
+            const skillPairs = [];
+            for (let i = 0; i < category.skills.length; i += 2) {
+              skillPairs.push(category.skills.slice(i, i + 2));
+            }
+            return (
+              <div className="skills-category-slide" key={idx}>
+                <h4>{category.category}</h4>
+                <div className="skills-list-pairs">
+                  {skillPairs.map((pair, pairIdx) => (
+                    <div className="skills-row" key={pairIdx} style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
+                      {pair.map((skill, index) => (
+                        <div className="skill-item" key={index} style={{ flex: 1, minWidth: 0, margin: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                          {skill.IconComponent ? (
+                            <skill.IconComponent size={40} />
+                          ) : (
+                            <span className="skill-text-icon">{skill.textIcon}</span>
+                          )}
+                          <span className="skill-name">{skill.name}</span>
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </Slider>
       </div>
     </section>
   );
