@@ -57,11 +57,6 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Sombra mais pronunciada no hover */
 }
 
-.cert-card:hover {
-  transform: translateY(-5px); /* Animação de hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Sombra mais pronunciada no hover */
-}
-
 .cert-card h4 {
   color: var(--text-color);
   margin-top: 0;

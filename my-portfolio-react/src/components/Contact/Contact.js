@@ -14,15 +14,13 @@ function Contact() {
 
     const { serviceId, templateId, userId } = contactData.emailjs;
     emailjs.sendForm(serviceId, templateId, form.current, userId)
-      .then((result) => {
-          console.log(result.text);
-          setMessage('Mensagem enviada com sucesso!');
-          setMessageType('success');
-          form.current.reset();
-      }, (error) => {
-          console.log(error.text);
-          setMessage('Erro ao enviar mensagem. Tente novamente.');
-          setMessageType('error');
+      .then(() => {
+        setMessage('Mensagem enviada com sucesso!');
+        setMessageType('success');
+        form.current.reset();
+      }, () => {
+        setMessage('Erro ao enviar mensagem. Tente novamente.');
+        setMessageType('error');
       });
   };
 
