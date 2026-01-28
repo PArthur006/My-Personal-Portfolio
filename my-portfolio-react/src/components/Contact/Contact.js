@@ -1,6 +1,8 @@
 import React, { useRef, useState, useEffect } from 'react';
 import './Contact.css';
 import emailjs from '@emailjs/browser';
+import contactData from '../../data/contactData';
+import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope } from 'react-icons/fa';
 
 function Contact() {
   const form = useRef();
@@ -10,7 +12,8 @@ function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_a2abjrq', 'template_lypseco', form.current, '5X-6u1rj_hp2xl2cx')
+    const { serviceId, templateId, userId } = contactData.emailjs;
+    emailjs.sendForm(serviceId, templateId, form.current, userId)
       .then((result) => {
           console.log(result.text);
           setMessage('Mensagem enviada com sucesso!');
@@ -48,20 +51,20 @@ function Contact() {
       </form>
 
       <div className="contact-links">
-        <a href="https://www.linkedin.com/in/parthurrod06/" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-linkedin"></i>
+        <a href={contactData.linkedin} target="_blank" rel="noopener noreferrer">
+          <FaLinkedin />
           LinkedIn
         </a>
-        <a href="https://github.com/PArthur006" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-github"></i>
+        <a href={contactData.github} target="_blank" rel="noopener noreferrer">
+          <FaGithub />
           GitHub
         </a>
-        <a href="https://www.instagram.com/pedroarthurrod06/" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-instagram"></i>
+        <a href={contactData.instagram} target="_blank" rel="noopener noreferrer">
+          <FaInstagram />
           Instagram
         </a>
-        <a href="mailto:parthur.rodrigues06@gmail.com">
-          <i className="fas fa-envelope"></i>
+        <a href={`mailto:${contactData.email}`}>
+          <FaEnvelope />
           E-mail
         </a>
       </div>

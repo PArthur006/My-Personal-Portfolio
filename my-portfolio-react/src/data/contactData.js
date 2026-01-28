@@ -1,0 +1,16 @@
+// src/data/contactData.js
+// Links e configurações de contato centralizados
+
+const contactData = {
+  linkedin: 'https://www.linkedin.com/in/parthurrod06/',
+  github: 'https://github.com/PArthur006',
+  instagram: 'https://www.instagram.com/pedroarthurrod06/',
+  email: 'parthur.rodrigues06@gmail.com',
+  emailjs: {
+    serviceId: 'service_a2abjrq',
+    templateId: 'template_lypseco',
+    userId: '5X-6u1rj_hp2xl2cx'
+  }
+};
+
+export default contactData;
