@@ -1,40 +1,13 @@
 
-import React from 'react';
-import '../Projects/Projects.css';
-
-const featuredProjectsData = [
-  {
-    category: 'Front-End',
-    title: 'Decola - Brasil',
-    description: 'Uma aplicação web que simula o fluxo de compra de passagens aéreas, permitindo ao usuário buscar voos, selecionar assentos em um mapa interativo e confirmar uma reserva.',
-    imageUrl: '/assets/images/DECOLA-BRASIL.png',
-    githubUrl: '#', // Adicionar link do GitHub aqui
-    liveUrl: '#' // Adicionar link da demo aqui
-  },
-  {
-    category: 'Back-End',
-    title: 'Sistema Integrado de Gestão Acadêmica',
-    description: 'O SIGA-FCTE é um sistema de desktop para gerenciamento acadêmico, desenvolvido em Java com a biblioteca Swing para a interface gráfica.',
-    imageUrl: '/assets/images/SIGA-FCTE.jpg',
-    githubUrl: 'https://github.com/PArthur006/Sistema-Integrado-de-Gestao-Academica',
-    liveUrl: '#'
-  },
-  {
-    category: 'Game-Development',
-    title: 'Sunflower-Knight',
-    description: 'Um jogo 2D que mistura estratégia e ação, onde o jogador assume o papel de um cavaleiro em uma jornada desafiadora.',
-    imageUrl: '/assets/images/Sunflower_Knight.jpg',
-    githubUrl: 'https://github.com/PArthur006/Sunflower-Knight',
-    liveUrl: '#'
-  }
-];
+import { getFeaturedProjects } from '../../data/projectsData';
 
 function FeaturedProjects() {
+  const featuredProjects = getFeaturedProjects();
   return (
     <section id="featured-projects">
       <h2>Projetos em Destaque</h2>
       <div className="project-grid">
-        {featuredProjectsData.map((project, index) => (
+        {featuredProjects.map((project, index) => (
           <div className="project-card" key={index} data-aos="zoom-in">
             <img src={project.imageUrl} alt={project.title} />
             <div className="project-info">
