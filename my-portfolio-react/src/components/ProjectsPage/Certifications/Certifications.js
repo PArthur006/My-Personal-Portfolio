@@ -52,7 +52,7 @@ function Certifications() {
 
   return (
     <section id="projects-certifications" data-aos="fade-up">
-      <h2>Meus Certificados</h2>
+      <h2>Painel de Certificações</h2>
       <div className="cert-carousel-container">
         <Slider {...settings}>
           {certificationsData.map((cert, idx) => (

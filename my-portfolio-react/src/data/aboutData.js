@@ -16,17 +16,26 @@ const aboutData = {
       ]
     },
     {
-      title: '⚙️ Engenharia de Dados e Infraestrutura',
+      title: '⚙️ Engenharia de Dados, Infraestrutura e Segurança',
       paragraphs: [
-        'Utilizei o Desenvolvimento Web (React) para entender a interface, mas hoje meu foco está onde o valor real reside: na Engenharia de Dados e Nuvem.',
-        'Especializo-me em SQL, ETL e Cloud Computing para garantir que a informação seja processada de forma escalável e eficiente, sustentando decisões inteligentes de negócio.'
+        'Utilizei o Desenvolvimento Web (React) para entender a interface, mas hoje meu foco está na Engenharia de Dados e na infraestrutura em nuvem, onde a governança e a observabilidade garantem operações confiáveis.',
+        'Estudo práticas de arquitetura de dados (ETL, pipelines), automação de deploy e controles de segurança para integrar a proteção desde o projeto até a operação.'
       ]
     },
     {
-      title: '🛡️ Foco: Segurança de Dados',
+      title: '🎓 Certificações Relevantes',
       paragraphs: [
-        'O dado só tem valor se estiver protegido, por isso, estudo ativamente Cibersegurança para integrar a segurança desde a concepção do código até o armazenamento final.',
-        'Meu objetivo é a Segurança de Dados, unindo a visão do software com a proteção de infraestruturas críticas.'
+        'Com meus estudos, venho adquirindo certificações que comprovam conhecimentos práticos em nuvem, plataformas de dados e engenharia de dados.'
+      ],
+      list: [
+        {
+          label: 'Oracle Data Platform Foundations Associate',
+          text: 'Valida conhecimentos fundamentais sobre a plataforma de dados da Oracle, incluindo princípios de ingestão, armazenamento e fundamentos de processamento de dados.'
+        },
+        {
+          label: 'Oracle Cloud Infrastructure Foundations Associate',
+          text: 'Comprova entendimento dos conceitos básicos de nuvem e dos serviços essenciais da Oracle Cloud (compute, storage, networking e identidade/controle de acesso).'
+        }
       ]
     }
   ]
