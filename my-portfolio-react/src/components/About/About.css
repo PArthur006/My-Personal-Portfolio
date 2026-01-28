@@ -12,6 +12,10 @@
   margin-bottom: 40px;
 }
 
+#about li {
+  text-align: left;
+}
+
 /* Usando um seletor específico para evitar conflitos com estilos globais */
 #about .carousel-container {
   max-width: 800px;

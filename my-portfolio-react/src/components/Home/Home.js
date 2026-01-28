@@ -15,7 +15,7 @@ function Home() {
         <div className="welcome-content">
           <img src="/assets/images/Pedro_Foto_Profissional.jpeg" alt="Foto de Pedro Arthur" className="profile-picture" />
           <h1>Pedro Arthur<br />
-            <i className="fas fa-code"></i> Engenheiro de Software <i className="fas fa-code"></i><br /><br />Portfólio Pessoal
+            <i className="fas fa-shield-alt"></i> Engenheiro de Segurança de Dados <i className="fas fa-shield-alt"></i><br /><br />Portfólio Pessoal
           </h1>
         </div>
       </section>

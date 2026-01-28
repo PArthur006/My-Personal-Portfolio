@@ -26,21 +26,34 @@ function About() {
       <div className="carousel-container">
         <Slider {...settings}>
           <div className="slide-content">
-            <h3>Bem-vindo ao Meu Perfil!</h3>
+            <h3>🏛️ Formação e Carreira</h3>
             <p>
-              Olá! Sou o <strong>Pedro Arthur</strong>, estudante de <strong>Engenharia de Software na UnB</strong> e um construtor de soluções por natureza. Atualmente, atuo como estagiário na <strong>First Decision</strong>, com foco em <strong>Dados, IA e Infraestrutura em Nuvem</strong>, aplicando minha formação de engenheiro para desenhar e implementar sistemas inteligentes, escaláveis e eficientes. 
+              <strong>Focado em Engenharia de Dados e Segurança</strong>.<br/>Minha trajetória é pautada pela transição do desenvolvimento técnico para a arquitetura de soluções robustas.
+            </p>
+            <ul>
+              <li><strong>UnB:</strong> Estudante de Engenharia de Software.</li>
+              <li><strong>First Decision:</strong> Estagiário em Migração de Dados, IA e Nuvem.</li>
+              <li><strong>SENAI:</strong> Qualificação Profissional em Desenvolvimento Full-Stack.</li>
+            </ul>
+          </div>
+
+          <div className="slide-content">
+            <h3>⚙️ Engenharia de Dados e Infraestrutura</h3>
+            <p>
+              Utilizei o <strong>Desenvolvimento Web (React)</strong> para entender a interface, mas hoje meu foco está onde o valor real reside: na <strong>Engenharia de Dados e Nuvem</strong>.
+            </p>
+            <p>
+              Especializo-me em <strong>SQL, ETL e Cloud Computing</strong> para garantir que a informação seja processada de forma escalável e eficiente, sustentando decisões inteligentes de negócio.
             </p>
           </div>
+
           <div className="slide-content">
-            <h3>Minha Visão: O Engenheiro Versátil</h3>
+            <h3>🛡️ Foco: Segurança de Dados</h3>
             <p>
-              Eu acredito na visão sistêmica. Minha formação em Engenharia de Software me dá uma base ampla que vai do <strong>Desenvolvimento Front-End (React, JS)</strong> ao <strong>Back-End (Java, Python)</strong>. Hoje, estou aprofundando meus conhecimentos em <strong>Engenharia de Dados (SQL)</strong> e <strong>Infraestrutura em Nuvem</strong>, o que me permite entender o ciclo de vida completo de uma solução, desde a interface do usuário até a arquitetura dos dados. 
+              O dado só tem valor se estiver protegido. Estudo ativamente <strong>Cibersegurança</strong> (Cisco, Google, Linux) para integrar a segurança desde a concepção do código até o armazenamento final.
             </p>
-          </div>
-          <div className="slide-content">
-            <h3>Minha Curiosidade Não Para</h3>
             <p>
-              Para mim, tecnologia é um campo unificado. Além da minha atuação em dados, sou um entusiasta de <strong>Cibersegurança</strong>, estudando ativamente (Google, Cisco, Linux) para entender como proteger os sistemas que ajudo a construir. Estou sempre em busca de desafios que me permitam conectar essas áreas: desenvolvimento, dados e segurança. <strong>Explore meus projetos</strong> e vamos conversar sobre como podemos inovar juntos.
+              Meu objetivo é a <strong>Segurança de Dados</strong>, unindo a visão do software com a proteção de infraestruturas críticas (SAP e Cloud). <strong>Explore meus projetos técnicos abaixo.</strong>
             </p>
           </div>
         </Slider>
