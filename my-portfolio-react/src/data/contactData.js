@@ -7,9 +7,10 @@ const contactData = {
   instagram: 'https://www.instagram.com/pedroarthurrod06/',
   email: 'parthur.rodrigues06@gmail.com',
   emailjs: {
-    serviceId: 'service_a2abjrq',
-    templateId: 'template_lypseco',
-    userId: '5X-6u1rj_hp2xl2cx'
+    // Prefer using environment variables for serverless path. These are kept for fallback/testing only.
+    serviceId: process.env.REACT_APP_EMAILJS_SERVICE_ID || 'service_a2abjrq',
+    templateId: process.env.REACT_APP_EMAILJS_TEMPLATE_ID || 'template_lypseco',
+    userId: process.env.REACT_APP_EMAILJS_USER_ID || '5X-6u1rj_hp2xl2cx'
   }
 };
 

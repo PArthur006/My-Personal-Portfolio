@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
 import './Contact.css';
-import emailjs from '@emailjs/browser';
 import contactData from '../../data/contactData';
 import { FaLinkedin, FaGithub, FaInstagram, FaEnvelope } from 'react-icons/fa';
 
@@ -9,19 +8,36 @@ function Contact() {
   const [message, setMessage] = useState('');
   const [messageType, setMessageType] = useState(''); // 'success' or 'error'
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
+    try {
+      const formData = new FormData(form.current);
+      const payload = {
+        from_name: formData.get('from_name'),
+        from_email: formData.get('from_email'),
+        subject: formData.get('subject'),
+        message: formData.get('message')
+      };
 
-    const { serviceId, templateId, userId } = contactData.emailjs;
-    emailjs.sendForm(serviceId, templateId, form.current, userId)
-      .then(() => {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+
+      const json = await res.json();
+      if (res.ok && json.success) {
         setMessage('Mensagem enviada com sucesso!');
         setMessageType('success');
         form.current.reset();
-      }, () => {
-        setMessage('Erro ao enviar mensagem. Tente novamente.');
+      } else {
+        setMessage(json.error || 'Erro ao enviar mensagem. Tente novamente.');
         setMessageType('error');
-      });
+      }
+    } catch (err) {
+      setMessage('Erro ao enviar mensagem. Tente novamente.');
+      setMessageType('error');
+    }
   };
 
   useEffect(() => {
