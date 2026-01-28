@@ -10,7 +10,7 @@ import './ProjectsPage.css';
 
 
 function ProjectsPage() {
-  const [activeCategory, setActiveCategory] = useState('Front-End');
+  const [activeCategory, setActiveCategory] = useState('Data & Infrastructure');
   const [selectedProject, setSelectedProject] = useState(null);
 
   useEffect(() => {
@@ -30,14 +30,16 @@ function ProjectsPage() {
   };
 
   const filteredProjects = projectsData.filter(project => project.category === activeCategory);
-  const filteredCourses = coursesData[activeCategory] || [];
+  const categoryBlock = coursesData.find(c => c.category === activeCategory);
+  const filteredCourses = (categoryBlock && categoryBlock.companies)
+    ? categoryBlock.companies.map(comp => ({ institution: comp.name, items: comp.items }))
+    : [];
 
   return (
     <div className="portfolio-page">
       <div className="category-tabs" data-aos="fade-down">
-        <button onClick={() => handleCategoryChange('Front-End')} className={activeCategory === 'Front-End' ? 'active' : ''}>Front-End</button>
-        <button onClick={() => handleCategoryChange('Back-End')} className={activeCategory === 'Back-End' ? 'active' : ''}>Back-End</button>
-        {/* Botão Game Dev removido */}
+        <button onClick={() => handleCategoryChange('Data & Infrastructure')} className={activeCategory === 'Data & Infrastructure' ? 'active' : ''}>Data & Infrastructure</button>
+        <button onClick={() => handleCategoryChange('Software Engineering')} className={activeCategory === 'Software Engineering' ? 'active' : ''}>Software Engineering</button>
       </div>
       <div key={activeCategory} data-aos="fade-up">
         <Courses courses={filteredCourses} />

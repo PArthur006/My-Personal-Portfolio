@@ -51,7 +51,7 @@ function Certifications() {
   };
 
   return (
-    <section id="certifications" data-aos="fade-up">
+    <section id="projects-certifications" data-aos="fade-up">
       <h2>Meus Certificados</h2>
       <div className="cert-carousel-container">
         <Slider {...settings}>

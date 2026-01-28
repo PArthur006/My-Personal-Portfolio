@@ -1,8 +1,8 @@
-#certifications {
+#projects-certifications {
     text-align: center;
 }
 
-#certifications h2 {
+#projects-certifications h2 {
     color: var(--text-color);
     border-bottom: 2px solid var(--text-color);
     display: inline-block;
