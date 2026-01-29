@@ -1,0 +1,56 @@
+#certifications > h2 {
+    color: var(--text-color);
+}
+
+.cert-carousel-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cert-item {
+    padding: 20px;
+    margin: 0 10px; 
+    background: var(--card-bg);
+    border-radius: 8px;
+    text-align: center;
+    color: var(--text-color);
+    height: 320px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.cert-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; 
+    border-radius: 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cert-image:hover {
+    transform: scale(1.05);
+}
+
+.cert-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+}
+
+.cert-issuer {
+    font-size: 0.9rem;
+    color: #bbbbbb; 
+    margin: 0;
+}
+
+/* Ajustes para o slick slider */
+.slick-slide > div {
+    margin: 0 15px;
+}
+
+.slick-list {
+    margin: 0 -10px;
+}
