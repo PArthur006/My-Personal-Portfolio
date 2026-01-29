@@ -2,7 +2,7 @@
 // Conteúdo dos slides da seção About centralizados como dados
 
 const aboutData = {
-  bioTitle: 'Estudante de Engenharia de Software | Foco em Engenharia de Dados e Segurança',
+  bioTitle: 'Pedro Arthur<br /><i class="fas fa-shield-alt"></i> Segurança de Dados <i class="fas fa-shield-alt"></i><br /><br />Portfólio Pessoal',
   slides: [
     {
       title: '🏛️ Formação e Carreira',
