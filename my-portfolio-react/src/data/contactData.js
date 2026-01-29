@@ -4,7 +4,7 @@
 const contactData = {
   linkedin: 'https://www.linkedin.com/in/parthurrod06/',
   github: 'https://github.com/PArthur006',
-  instagram: 'https://www.instagram.com/pedroarthurrod06/',
+  instagram: 'https://www.instagram.com/parthur06',
   email: 'parthur.rodrigues06@gmail.com',
   emailjs: {
     // Prefer using environment variables for serverless path. These are kept for fallback/testing only.
