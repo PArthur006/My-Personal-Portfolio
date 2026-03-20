@@ -6,10 +6,10 @@
 
 Este é o repositório do meu portfólio pessoal, uma Single-Page Application (SPA) desenvolvida para exibir meus projetos, certificações e habilidades de forma moderna, limpa e com uma experiência de usuário intuitiva.
 
-**➡️ [Acesse a versão ao vivo aqui!](https://my-portfolio-react-iota-one.vercel.app/)**
+**➡️ [Acesse a versão ao vivo aqui!](https://parthur.dev/)**
 
 <div align='center'>
- <img width="350" height="311" alt="Image" src="https://github.com/user-attachments/assets/f85f3e08-6b5e-493e-b782-faa3b7ae7dd2" />
+ <img width="1091" height="566" alt="Image" src="https://github.com/user-attachments/assets/68dd7471-81f1-49eb-92c1-13b549f87f5c" />
 </div> 
 
 ---
